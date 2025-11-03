@@ -9,22 +9,22 @@ INCLUDEPATH += $$PWD/Headers
 
 # Sources
 SOURCES += \
-    Headers/client/client.h \
-    Headers/fournisseur/fourn.h \
     Src/client/cl.cpp \
     Src/fournisseur/fr.cpp \
     Src/main.cpp \
-    Src/mainwindow.cpp
+    Src/mainwindow.cpp \
 
 # Headers
 HEADERS += \
-    Headers/mainwindow.h
+    Headers/mainwindow.h \
+    Headers/client/client.h \
+    Headers/fournisseur/fourn.h \
 
 # Forms
 FORMS += \
     forms/client/toolbox.ui \
     forms/fournisseur/toolbox.ui \
-    forms/mainwindow.ui
+    forms/mainwindow.ui \
 
 # Default rules for deployment
 qnx: target.path = /tmp/$${TARGET}/bin
