@@ -1,4 +1,4 @@
-QT += core gui widgets
+QT += core gui widgets sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -9,6 +9,7 @@ INCLUDEPATH += $$PWD/Headers
 
 # Sources
 SOURCES += \
+    ConfigDb.cpp \
     Src/client/cl.cpp \
     Src/fournisseur/fr.cpp \
     Src/main.cpp \
@@ -16,6 +17,7 @@ SOURCES += \
 
 # Headers
 HEADERS += \
+    Databse.h \
     Headers/mainwindow.h \
     Headers/client/client.h \
     Headers/fournisseur/fourn.h \
@@ -23,7 +25,6 @@ HEADERS += \
 # Forms
 FORMS += \
     forms/client/toolbox.ui \
-    forms/fournisseur/toolbox.ui \
     forms/mainwindow.ui \
 
 # Default rules for deployment

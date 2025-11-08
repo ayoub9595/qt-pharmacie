@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include"Databse.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,8 +16,18 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void onConnectionStatusChanged(bool connected);
+    void onDatabaseError(const QString &error);
+
+
+
+    void on_loginButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+    XamppDatabase *database;
+    void setupDatabase();
 };
 
-#endif // MAINWINDOW_H
+#endif
